@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,22 @@
 </head>
 <body>
     <h1>Выберите блюда на день</h1>
-    <form action="/choose" method="post">
-        {% for item in menu_items %}
-            <input type="checkbox" id="{{ item.id }}" name="{{ item.id }}">
-            <label for="{{ item.id }}">{{ item.name }}</label><br>
-        {% endfor %}
+    <form action="selected.html">
+        <input type="checkbox" id="pasta" name="pasta">
+        <label for="pasta">Паста с томатным соусом</label><br>
+        
+        <input type="checkbox" id="caesar_salad" name="caesar_salad">
+        <label for="caesar_salad">Салат Цезарь</label><br>
+        
+        <input type="checkbox" id="steak" name="steak">
+        <label for="steak">Стейк из говядины</label><br>
+        
+        <input type="checkbox" id="fish_soup" name="fish_soup">
+        <label for="fish_soup">Рыбный суп</label><br>
+        
+        <input type="checkbox" id="fruit_salad" name="fruit_salad">
+        <label for="fruit_salad">Фруктовый салат</label><br>
+        
         <br>
         <input type="submit" value="Выбрать">
     </form>
