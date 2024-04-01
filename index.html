@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
 </head>
 <body>
     <h1>Выберите блюда на день</h1>
-   <form action="selected.html" method="get">
+    <form id="menuForm">
         <input type="checkbox" id="pasta" name="pasta">
         <label for="pasta">Паста с томатным соусом</label><br>
         
@@ -25,7 +24,16 @@
         <label for="fruit_salad">Фруктовый салат</label><br>
         
         <br>
-        <input type="submit" value="Выбрать">
+        <input type="button" value="Выбрать" onclick="submitForm()">
     </form>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("menuForm");
+            form.action = "selected.html";
+            form.method = "get";
+            form.submit();
+        }
+    </script>
 </body>
 </html>
