@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор блюд на день</title>
+</head>
+<body>
+    <h1>Выберите блюда на день</h1>
+    <form action="/choose" method="post">
+        {% for item in menu_items %}
+            <input type="checkbox" id="{{ item.id }}" name="{{ item.id }}">
+            <label for="{{ item.id }}">{{ item.name }}</label><br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Выбрать">
+    </form>
+</body>
+</html>
