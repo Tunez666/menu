@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Выберите блюда на день</h1>
-    <form id="menuForm">
+    <form>
         <input type="checkbox" id="pasta" name="pasta">
         <label for="pasta">Паста с томатным соусом</label><br>
         
@@ -24,16 +24,7 @@
         <label for="fruit_salad">Фруктовый салат</label><br>
         
         <br>
-        <input type="button" value="Выбрать" onclick="submitForm()">
+        <a href="selected.html">Выбрать</a>
     </form>
-
-    <script>
-        function submitForm() {
-            var form = document.getElementById("menuForm");
-            form.action = "selected.html";
-            form.method = "get";
-            form.submit();
-        }
-    </script>
 </body>
 </html>
